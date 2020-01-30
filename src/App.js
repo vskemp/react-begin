@@ -1,26 +1,23 @@
+// #1: IMPORT REACT
 import React from 'react';
+// const React = require('react');
 import logo from './logo.svg';
 import './App.css';
+import Greet from './greet';
 
+
+// #2 you always need to define a function or a class
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello, React!</h1>
+      <Greet whom="Alice" /> {/* same as <Greet></Greet> */}
+      <Greet whom="Bob" />
+      <Greet whom="Cthulu" />
     </div>
   );
 }
 
+//#3 you always export that function (or class)
 export default App;
+// module.exports = App;
